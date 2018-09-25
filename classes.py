@@ -6,8 +6,7 @@ class Father():
             - name => Nome completo
             - age => Idade
     """
-    name = ''
-    age = 0
+
     def __init__(self, name, age):
         print("I'm being created!")
         self.name = name
@@ -37,11 +36,15 @@ class Son(Father):
             - name [string]
             - age [int+]
     """
-    num_friends = 0
+    __num_sons = 0
 
     def __init__(self, num_friends, **kwargs):
+        Son.__num_sons += 1
         self.num_friends = num_friends
         super().__init__(**kwargs)
     
     def walk(self):
         print("I'm running")
+        
+    def getNumSons(self):
+        return Son.__num_sons
