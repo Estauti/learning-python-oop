@@ -13,4 +13,6 @@ if __name__ == "__main__":
     print(s.age)
     s.eat('a cake')
     s.walk()
+    print('my str is: ', str(s))
+    print('my repr is: ', repr(s))
     del s

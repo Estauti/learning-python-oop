@@ -43,6 +43,12 @@ class Son(Father):
         self.num_friends = num_friends
         super().__init__(**kwargs)
     
+    def __str__(self):
+        return self.name
+
+    def __repr__(self):
+        return f'Son(num_friends={self.getNumSons()}, name={self.name}, age={self.age})'
+    
     def walk(self):
         print("I'm running")
         
