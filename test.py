@@ -1,6 +1,7 @@
 from classes import Father, Son
 
 if __name__ == "__main__":
+    Father.live()
     f = Father(name="Victor", age=21)
     print(f.name)
     print(f.age)

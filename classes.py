@@ -23,6 +23,10 @@ class Father():
 
     def walk(self):
         print("I'm walking")
+    
+    @staticmethod
+    def live():
+        print("I'm living!")
 
 
 class Son(Father):
@@ -47,7 +51,7 @@ class Son(Father):
         return self.name
 
     def __repr__(self):
-        return f'Son(num_friends={self.getNumSons()}, name={self.name}, age={self.age})'
+        return f"Son(num_friends={self.getNumSons()}, name={self.name}, age={self.age})"
     
     def walk(self):
         print("I'm running")
